@@ -1,28 +1,31 @@
-﻿namespace Libraty_prog
+﻿using Libraty_prog;
+
+namespace LibraryManagement
 {
-    public abstract class LibraryManagmentCore
+    public class LibraryManagementCore
     {
         public LibraryStore Store { get; set; }
 
-        public LibraryManagmentCore()
+        public LibraryManagementCore()
         {
             Store = new LibraryStore();
         }
 
-        public LibraryManagmentCore(List<Book> books, List<User> users)
+        public LibraryManagementCore(List<Book> books, List<User> users)
         {
             Store = new LibraryStore(books, users);
         }
+
         public void DisplayAllUsers()
         {
             foreach (var user in Store.Users)
-                Console.WriteLine(user);
+                Console.WriteLine(user.ToString());
         }
 
         public void DisplayAllBooks()
         {
             foreach (var book in Store.Books)
-                Console.WriteLine(book);
+                Console.WriteLine(book.ToString());
         }
     }
 }

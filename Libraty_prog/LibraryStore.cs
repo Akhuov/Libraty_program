@@ -1,4 +1,6 @@
-﻿namespace Libraty_prog
+﻿using Libraty_prog;
+
+namespace LibraryManagement
 {
     public class LibraryStore
     {
