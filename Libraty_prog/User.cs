@@ -9,7 +9,7 @@ namespace LibraryManagement
         public string LastName { get; set; }
         public string UserName { get; set; }
 
-        public User(string firstName, string lastName)
+        private User(string firstName, string lastName)
         {
             Id = Guid.NewGuid();
             FirstName = firstName;
