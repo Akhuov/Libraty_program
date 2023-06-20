@@ -1,10 +1,16 @@
-﻿using LibraryManagement;
+﻿using Library_prog;
 
 
-namespace Libraty_prog
+namespace Library_prog
 {
-    public class LibraryManegement : LibraryManagementCore
+    public class LibraryManagement : LibraryManagementCore
     {
+        private EmailService emailService;
+
+        public LibraryManagement()
+        {
+            emailService = new EmailService();
+        }
         public void RegisterUser(string firsName,string lastName)
         {
 
@@ -14,7 +20,7 @@ namespace Libraty_prog
             var foundUser = false;
 
             foreach (var user in Store.Users)
-                if(user.UserName==userName)
+                if(user.Email==userName)
                 {
                     foundUser = true;
                     break;
@@ -24,7 +30,7 @@ namespace Libraty_prog
                 return;
 
             Store.Users.Add(new User(firsName, lastName, userName));
-
+            emailService.SendEmail(userName);
         }
     }
 }

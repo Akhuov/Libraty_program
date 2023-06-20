@@ -1,7 +1,9 @@
-﻿using LibraryManagement;
-using Libraty_prog;
-
-//var libraryManagement = new LibraryManagementCore(DataSource.Books, DataSource.Users);
-
-//libraryManagement.DisplayAllBooks();
-//libraryManagement.DisplayAllUsers();
+﻿using Library_prog;
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        var libraryManagment = new LibraryManagement();
+        libraryManagment.RegisterUser("Sultonbek", "Abdullayev", "");
+    }
+}

@@ -1,7 +1,7 @@
-﻿using Libraty_prog;
+﻿using Library_prog;
 using System.Reflection.Metadata.Ecma335;
 
-namespace LibraryManagement;
+namespace Library_prog;
 
 public static class DataSource
 {

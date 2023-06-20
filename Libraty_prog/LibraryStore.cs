@@ -1,6 +1,6 @@
-﻿using Libraty_prog;
+﻿using Library_prog;
 
-namespace LibraryManagement
+namespace Library_prog
 {
     public class LibraryStore
     {

@@ -1,4 +1,4 @@
-﻿namespace Libraty_prog
+﻿namespace Library_prog
 {
     public class Book
     {
